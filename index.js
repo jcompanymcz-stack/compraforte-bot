@@ -28,7 +28,9 @@ async function start(){
 
   sock.ev.on('connection.update', (u) => {
     const { connection, lastDisconnect, qr } = u;
-    if (qr){ console.log('🟩 Escaneie o QR:'); qrcode.generate(qr, { small: true }); }
+    if (qr){ console.log('🟩 Escaneie o QR:'); console.log("👉 Escaneie neste link:");
+console.log(`https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=${encodeURIComponent(qr)}`);
+ }
     if (connection) console.log('🔗 Conexão:', connection);
     if (lastDisconnect?.error) console.error('❌', lastDisconnect.error?.message || lastDisconnect.error);
   });
