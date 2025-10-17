@@ -1,0 +1,1 @@
+cotacao_id,pedido_id,fornecedor_id,data_hora_cotado,preco_total,frete_total,prazo_entrega_horas,validade_preco_horas,itens_resumo,condicao_pagamento,foi_vencedor,motivo_perda

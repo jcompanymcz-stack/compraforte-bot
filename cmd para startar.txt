@@ -1,0 +1,9 @@
+cd /d D:\projetos\whatsapp-bot\whatsapp-bot-day0\
+
+npm run start
+
+
+
+cd /d D:\projetos\whatsapp-bot\whatsapp-bot-day0
+node index.js
+
