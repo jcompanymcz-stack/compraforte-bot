@@ -1,30 +1,20 @@
 {
-  "name": "compraforte-wa-bot",
-  "version": "0.1.0",
-  "private": true,
+  "name": "compraforte-bot",
+  "version": "1.0.0",
   "type": "module",
-  "scripts": {
-    "start": "node index.js",
-    "dev": "node --watch index.js"
-  },
+  "main": "index.js",
+ "scripts": {
+  "start": "bash start.sh"
+},
   "dependencies": {
-    "@whiskeysockets/baileys": "^6.7.20",
+    "@whiskeysockets/baileys": "^6.7.7",
     "csv-writer": "^1.6.0",
-    "dotenv": "^16.6.1",
-    "express": "^5.1.0",
-    "fast-csv": "^5.0.1",
-    "fs-extra": "^11.2.0",
-    "openai": "^6.4.0",
-    "pino": "^9.13.1",
+    "dotenv": "^17.2.3",
+    "fast-csv": "^4.3.6",
+    "fs-extra": "^11.3.2",
+    "openai": "^4.0.0",
+    "pino": "^9.0.0",
     "qrcode-terminal": "^0.12.0",
     "uuid": "^9.0.1"
-  },
-  "description": "Bot mínimo para operar o piloto: recebe listas pelo WhatsApp, registra pedido em CSV e envia confirmações.  Inclui comandos básicos (*ajuda, pedido, status*), notificação para admins e simulação de comparativo.",
-  "main": "index.js",
-  "directories": {
-    "lib": "lib"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
