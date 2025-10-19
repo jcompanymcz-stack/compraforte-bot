@@ -6,7 +6,6 @@ import * as qrcode from 'qrcode-terminal'
 
 import { setupCore, onText } from './lib/core.js'
 import { initAll } from './lib/db.js'
-import { shouldProcessMessage } from './lib/dedupe.js' // <-- ADICIONADO
 
 const AUTH_DIR = process.env.AUTH_DIR || './auth'
 const normalize = (jid='') => jid.replace(/@s\.whatsapp\.net$/, '').replace(/[^0-9]/g, '')
@@ -57,9 +56,6 @@ async function start(){
     if (type !== 'notify') return
     for (const m of messages){
       try{
-        // --- DEDUP: processa cada mensagem apenas uma vez ---
-        if (!shouldProcessMessage(m)) continue
-
         if (!m.message || m.key.fromMe) continue
         const jid = m.key.remoteJid
         const from = normalize(jid)
